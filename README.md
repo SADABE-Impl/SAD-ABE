@@ -18,4 +18,4 @@ You can run
 ```sh
 sudo make && sudo pip install . && python benchmark/benchmark_XXX.py
 ```
-to test the schemes. 
+to run the benchmarks.
