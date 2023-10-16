@@ -1,5 +1,5 @@
 from charm.toolbox.pairinggroup import PairingGroup,ZR,G1,G2,GT,pair
-from ABE.dgp22KPSADABE import DGP22KPSADABE
+from schemes.dgp22KPSADABE import DGP22KPSADABE
 
 #size of policy/attribute set
 n = 20
