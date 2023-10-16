@@ -1,5 +1,5 @@
 from charm.toolbox.pairinggroup import PairingGroup,ZR,G1,G2,GT,pair
-from ABE.acns24submissionCPSADABE import CPSADABE
+from schemes.acns24submissionCPSADABE import CPSADABE
 
 #size of policy/attribute set
 n = 5
