@@ -1,5 +1,5 @@
 from charm.toolbox.pairinggroup import PairingGroup,ZR,G1,G2,GT,pair
-from ABE.cgkw18KPABE import CGKW18KPABE
+from schemes.cgkw18KPABE import CGKW18KPABE
 
 #size of policy/attribute set
 n = 20
