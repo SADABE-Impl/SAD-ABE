@@ -16,6 +16,6 @@ to test the schemes.
 
 You can run 
 ```sh
-sudo make && sudo pip install . && python test/benchmark_XXX.py
+sudo make && sudo pip install . && python benchmark/benchmark_XXX.py
 ```
 to test the schemes. 
