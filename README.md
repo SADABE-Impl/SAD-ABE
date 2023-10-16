@@ -4,7 +4,7 @@
 ## Prerequisites
 
 The schemes have been tested with Charm 0.50 and Python 3.8.10.
-Charm 0.43 can be installed from [this](https://github.com/JHUISI/charm/releases) page, or by running
+Charm 0.43 can be installed from [this](https://github.com/JHUISI/charm.git) page, or by running
 ```sh
 pip install -r requirements.txt
 ```
