@@ -4,7 +4,7 @@
 '''
 
 from charm.toolbox.pairinggroup import PairingGroup, GT
-from schemes.dgp22KPSADABE import DGP22KPSADABE
+from ABE.dgp22KPSADABE import DGP22KPSADABE
 
 
 def main():
