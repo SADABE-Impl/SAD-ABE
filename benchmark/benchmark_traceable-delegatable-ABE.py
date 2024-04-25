@@ -60,6 +60,8 @@ for k in range(3):
     assert pairing_group.InitBenchmark(), "failed to initialize benchmark"
     pairing_group.StartBenchmark(["RealTime"])
     for a in range(trials):
+	if type == "setup":
+	    abe.setup()
         if type == "enc":
             abe.encrypt(pk, msg, attr_list, sk, attr_semi_list)
         if type == "keygen":
