@@ -1,6 +1,7 @@
 from charm.toolbox.pairinggroup import PairingGroup,ZR,G1,G2,GT,pair
 from schemes.cgkw18KPABE import CGKW18KPABE
 import sys
+sys.setrecursionlimit(1000000)
 #size of policy/attribute set
 n = 0
 trials = 10
@@ -16,7 +17,7 @@ abe = CGKW18KPABE(pairing_group, 1, 100)
 (pk, msk) = abe.setup()
 
 for k in range(10):
-	n += 10
+	n += 100
 	policy_str = '(0'
 	attr_list = ['0']
 	for i in range(1, n):
@@ -34,8 +35,8 @@ for k in range(10):
 	assert pairing_group.InitBenchmark(), "failed to initialize benchmark"
 	pairing_group.StartBenchmark(["RealTime"])
 	for a in range(trials):
-	    if type == "setup":
-	    	abe.setup()
+            if type == "setup":
+                abe.setup()
             if type == "enc":
                 abe.encrypt(pk, msg, attr_list)
             if type == "keygen":

@@ -1,9 +1,10 @@
 from charm.toolbox.pairinggroup import PairingGroup,ZR,G1,G2,GT,pair
 from schemes.OurCPSADABE import CPSADABE
 import sys
+sys.setrecursionlimit(1000000)
 #size of policy/attribute set
 n = 0
-trials = 10
+trials = 1
 type = "dec"
 if(len(sys.argv)==2):
     type = sys.argv[1]
@@ -16,7 +17,7 @@ abe = CPSADABE(pairing_group, 1, 100)
 (pk, msk, sk) = abe.setup()
 
 for k in range(10):
-    n += 10
+    n += 100
     policy_str = '(0'
     attr_list = ['0']
     for i in range(1, n):
@@ -36,8 +37,8 @@ for k in range(10):
     assert pairing_group.InitBenchmark(), "failed to initialize benchmark"
     pairing_group.StartBenchmark(["RealTime"])
     for a in range(trials):
-	    if type == "setup":
-	        abe.setup()
+        if type == "setup":
+            abe.setup()
         if type == "enc":
        	    abe.encrypt(pk, msg, policy_str, sk, policy_semi_list)
         if type == "keygen":
