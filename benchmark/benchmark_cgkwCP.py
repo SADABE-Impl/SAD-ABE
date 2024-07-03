@@ -9,7 +9,7 @@ type = "dec"
 if(len(sys.argv)==2):
     type = sys.argv[1]
 
-print("Benchmarks for ", type, " with ", trials, " trials.")
+#print("Benchmarks for ", type, " with ", trials, " trials.")
 
 pairing_group = PairingGroup('MNT224')
 abe = CGKW18CPABE(pairing_group, 1, 100)
@@ -47,7 +47,7 @@ for k in range(10):
 
     msmtDict = pairing_group.GetGeneralBenchmarks()
     # granDict = pairing_group.GetGranularBenchmarks()
-    print("Attribute no := ", n, ", Time  := ", msmtDict['RealTime'])
+    print("Attribute no := ", n, ", Time  := ", msmtDict['RealTime']/10)
 # print("<=== Granular Benchmarks ===>")
 # print("G1 mul   := ", granDict["Mul"][G1])
 # print("G2 exp   := ", granDict["Exp"][G2])	
