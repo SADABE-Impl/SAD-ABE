@@ -17,12 +17,12 @@ n1 = 2 * le
 n2 = p * tau * le
 #n3 is the number of type_II attr: p*z*len
 n3 = p * z * le
-trials = 1
+trials = 10
 type = "dec"
 if(len(sys.argv)==2):
     type = sys.argv[1]
 
-print("Benchmarks for ", type, " with ", trials, " trials.")
+#print("Benchmarks for ", type, " with ", trials, " trials.")
 
 pairing_group = PairingGroup('MNT224')
 abe = KPSADABE(pairing_group, 1, 100)
@@ -71,7 +71,7 @@ for i in range(10):
 	
     msmtDict = pairing_group.GetGeneralBenchmarks()
 	# granDict = pairing_group.GetGranularBenchmarks()
-    print("Attribute No := ", n, ", Time  := ", msmtDict['RealTime'])
+    print("Attribute No := ", n, ", Time  := ", msmtDict['RealTime']/10)
 # print("<=== Granular Benchmarks ===>")
 # print("G1 mul   := ", granDict["Mul"][G1])
 # print("G2 exp   := ", granDict["Exp"][G2])	
